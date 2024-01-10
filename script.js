@@ -33,6 +33,7 @@ video.addEventListener('click', function handler(e) {
 });
 
 button19.addEventListener('click', () => {
+    buttonsDiv.style.display = 'none'
     video.play();
     let mutedVideo = video.addEventListener('timeupdate', () => {
         if (video.currentTime >= 3.9) {
@@ -43,8 +44,10 @@ button19.addEventListener('click', () => {
     function playAudio() {
         audio.play();
     }
+
 })
 button21.addEventListener('click', () => {
+    buttonsDiv.style.display = 'none'
     video.play();
     video.addEventListener('timeupdate', () => {
         if (video.ended) {
