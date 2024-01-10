@@ -1,0 +1,23 @@
+:root {
+    --dark-background: rgb(0,0,0, 0.7);
+}
+
+* { box-sizing: border-box; }
+html { font-size: 62.5%; }
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.8em;
+    font-family: 'NaturalMonoAltRegular', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+    line-height: 1.3;
+    color: #292929;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.8rem; }
+h5 { font-size: 1.6rem; }
+h6 { font-size: 1.4rem; }
+
+/* button, textarea, input, select, label { all: unset } */
