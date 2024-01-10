@@ -3,7 +3,7 @@
 }
 
 * { box-sizing: border-box; }
-html { font-size: 62.5%; }
+html { font-size: 62.5%; height: 100vh;}
 body {
     margin: 0;
     padding: 0;
@@ -11,6 +11,13 @@ body {
     font-family: 'NaturalMonoAltRegular', -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
     line-height: 1.3;
     color: #292929;
+
+
+    background: var(--dark-background);
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
 }
 
 h1 { font-size: 3rem; }
@@ -21,3 +28,9 @@ h5 { font-size: 1.6rem; }
 h6 { font-size: 1.4rem; }
 
 /* button, textarea, input, select, label { all: unset } */
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
