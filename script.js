@@ -1,4 +1,5 @@
 const video = document.querySelector('.video-div video');
+const audio = document.querySelector('.video-div audio')
 const button19 = document.createElement('button')
 const button21 = document.createElement('button')
 const buttonsDiv = document.querySelector('.buttons-div');
@@ -32,12 +33,21 @@ video.addEventListener('click', function handler(e) {
 });
 
 button19.addEventListener('click', () => {
-    
+    video.play();
+    let mutedVideo = video.addEventListener('timeupdate', () => {
+        if (video.currentTime >= 3.9) {
+            video.muted = true;
+        }
+    }) 
+    setTimeout(playAudio, 250)
+    function playAudio() {
+        audio.play();
+    }
 })
 button21.addEventListener('click', () => {
     video.play();
     video.addEventListener('timeupdate', () => {
-        if (video.ended === true) {
+        if (video.ended) {
             setTimeout(closePage, 200)
             function closePage() {
                 window.close();
@@ -45,5 +55,3 @@ button21.addEventListener('click', () => {
         }
     })
 })
-
-
