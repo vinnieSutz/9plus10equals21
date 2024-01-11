@@ -42,7 +42,7 @@ button19.addEventListener('click', () => {
             setTimeout(changeScreen, 1200)
             function changeScreen() {
                 document.body.style.background = 'black';
-                contentDiv.style.scale = '0.5';
+                contentDiv.style.scale = '0.35';
                 video.style.border = '4px solid white';
                 const whatText = document.createElement('h1');
                 whatText.textContent = 'What';
