@@ -28,8 +28,6 @@ h6 { font-size: 1.4rem; }
 
 /* button, textarea, input, select, label { all: unset } */
 
-/* remove this p selector and element later!!! */
-
 h1 {
     color: #ffffff;
     font-size: 6rem;
@@ -59,8 +57,10 @@ audio {
 }
 
 .answer-button {
+    flex: 1;
     border: 2px solid black;
     padding: 16px 32px;
     border-radius: 5px;
-    background: #4d3856;
-}
+    font-size: 2rem;
+    background: #1e40af;
+} 
