@@ -25,11 +25,6 @@ video.addEventListener('click', function handler(e) {
             e.currentTarget.removeEventListener(e.type, handler);
         }
     });
-
-    // time tracker :3
-    // video.ontimeupdate = () => {
-    //     document.querySelector('p').innerText = video.currentTime;
-    // }
 });
 
 button19.addEventListener('click', () => {
