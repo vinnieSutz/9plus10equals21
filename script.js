@@ -1,5 +1,6 @@
 const video = document.querySelector('.video-div video');
-const audio = document.querySelector('.video-div audio')
+const ttsVoice = document.querySelector('.nineteen-TTS')
+const waitWhat = document.querySelector('.earthbound-song')
 const button19 = document.createElement('button')
 const button21 = document.createElement('button')
 const buttonsDiv = document.querySelector('.buttons-div');
@@ -12,7 +13,6 @@ video.currentTime = 1.8;
 video.addEventListener('click', function handler(e) {
     e.currentTarget.removeEventListener(e.type, handler);
     video.play();
-
     video.addEventListener('timeupdate', function handler(e) {
         if (video.currentTime >= 3.4) {
             video.pause();
@@ -38,15 +38,21 @@ button19.addEventListener('click', () => {
     video.addEventListener('timeupdate', function handler(e) {
         if (video.currentTime >= 4) {
             e.currentTarget.removeEventListener(e.type, handler)
-            audio.play()
-            setTimeout(changeScreen, 1300)
+            ttsVoice.play()
+            setTimeout(changeScreen, 1200)
             function changeScreen() {
                 document.body.style.background = 'black';
                 contentDiv.style.scale = '0.5';
-                const whatText = document.createElement('h1');
-                whatText.textContent = 'What?';
-                contentDiv.appendChild(whatText);
                 video.style.border = '4px solid white';
+                const whatText = document.createElement('h1');
+                whatText.textContent = 'What';
+                contentDiv.appendChild(whatText);
+                waitWhat.play();
+                waitWhat.addEventListener('timeupdate', () => {
+                    if (waitWhat.ended) {
+                        location.reload();
+                    }
+                })
             }
         }
     })
