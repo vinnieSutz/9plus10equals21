@@ -3,6 +3,7 @@ const audio = document.querySelector('.video-div audio')
 const button19 = document.createElement('button')
 const button21 = document.createElement('button')
 const buttonsDiv = document.querySelector('.buttons-div');
+const contentDiv = document.querySelector('.content');
 
 navigator.mediaSession.setActionHandler('play', function() {});
 navigator.mediaSession.setActionHandler('pause', function() {});
@@ -26,23 +27,34 @@ video.addEventListener('click', function handler(e) {
     });
 
     // time tracker :3
-    video.ontimeupdate = () => {
-        document.querySelector('p').innerText = video.currentTime;
-    }
+    // video.ontimeupdate = () => {
+    //     document.querySelector('p').innerText = video.currentTime;
+    // }
 });
 
 button19.addEventListener('click', () => {
     buttonsDiv.style.display = 'none'
     video.play();
-    let mutedVideo = video.addEventListener('timeupdate', () => {
-        if (video.currentTime >= 3.9) {
+    video.addEventListener('timeupdate', () => {
+        if (video.currentTime >= 3.5) {
             video.muted = true;
-        }
+        } 
     }) 
-    setTimeout(playAudio, 250)
-    function playAudio() {
-        audio.play();
-    }
+    video.addEventListener('timeupdate', function handler(e) {
+        if (video.currentTime >= 4) {
+            e.currentTarget.removeEventListener(e.type, handler)
+            audio.play()
+            setTimeout(changeScreen, 1300)
+            function changeScreen() {
+                document.body.style.background = 'black';
+                contentDiv.style.scale = '0.5';
+                const whatText = document.createElement('h1');
+                whatText.textContent = 'What?';
+                contentDiv.appendChild(whatText);
+                video.style.border = '4px solid white';
+            }
+        }
+    })
 })
 
 button21.addEventListener('click', () => {

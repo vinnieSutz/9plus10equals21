@@ -20,7 +20,6 @@ body {
     justify-content: center;
 }
 
-h1 { font-size: 3rem; }
 h2 { font-size: 2.4rem; }
 h3 { font-size: 2rem; }
 h4 { font-size: 1.8rem; }
@@ -30,14 +29,26 @@ h6 { font-size: 1.4rem; }
 /* button, textarea, input, select, label { all: unset } */
 
 /* remove this p selector and element later!!! */
-p {
+
+h1 {
+    color: #ffffff;
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+/* p {
     text-align: center;
+} */
+
+audio {
+    display: none;
 }
 
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 3.5rem;
 }
 
 .wrapper {
@@ -56,8 +67,4 @@ p {
     padding: 16px 32px;
     border-radius: 5px;
     background: #4d3856;
-}
-
-audio {
-    display: none;
 }
