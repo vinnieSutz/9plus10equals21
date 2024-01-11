@@ -4,8 +4,10 @@ const button19 = document.createElement('button')
 const button21 = document.createElement('button')
 const buttonsDiv = document.querySelector('.buttons-div');
 
-video.currentTime = 1.8;
+navigator.mediaSession.setActionHandler('play', function() {});
+navigator.mediaSession.setActionHandler('pause', function() {});
 
+video.currentTime = 1.8;
 video.addEventListener('click', function handler(e) {
     e.currentTarget.removeEventListener(e.type, handler);
     video.play();
@@ -13,13 +15,10 @@ video.addEventListener('click', function handler(e) {
     video.addEventListener('timeupdate', function handler(e) {
         if (video.currentTime >= 3.4) {
             video.pause();
-            
             button19.classList.add('answer-button')
             button19.textContent = '19'
-        
             button21.classList.add('answer-button')
             button21.textContent = '21'
-        
             buttonsDiv.appendChild(button19)
             buttonsDiv.appendChild(button21)
             e.currentTarget.removeEventListener(e.type, handler);
@@ -44,8 +43,8 @@ button19.addEventListener('click', () => {
     function playAudio() {
         audio.play();
     }
-
 })
+
 button21.addEventListener('click', () => {
     buttonsDiv.style.display = 'none'
     video.play();
@@ -58,3 +57,4 @@ button21.addEventListener('click', () => {
         }
     })
 })
+
