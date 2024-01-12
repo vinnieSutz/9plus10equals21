@@ -1,8 +1,7 @@
 # 9plus10equals21
-9 + 10 = 21
+What is nine plus 10? The answer for sure is twenty one...
 
-<sub>That was funny</sub><br>
-I wanted to see how video and audio behave within the DOM, so I had this brilliant idea ~~totally worth it~~
+I wanted to see how video and audio behave within the DOM, so I had this brilliant idea ~~totally worth it~~<br>
 
-TTS voice from https://readloud.net/ <br>
-Used 10 seconds of Earthbound's Sanctuary Guardian track (aka the 'wait what' meme) 
++ TTS voice from https://readloud.net/ <br>
++ Used 10 seconds of Earthbound's Sanctuary Guardian track (aka the 'wait what' meme)
